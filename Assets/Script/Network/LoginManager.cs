@@ -45,9 +45,9 @@ public class LoginManager : MonoBehaviour
 
         NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
 
-        // Vector3 spawnPos = GameObject.Find("SpawnPoint").transform.position;
-        // Quaternion spawnRot = Quaternion.identity;
-        // NetworkManager.Singleton.StartHost(spawnPos, spawnRot);
+        Vector3 spawnPos = Vector3.zero;
+        Quaternion spawnRot = Quaternion.identity;
+        NetworkManager.Singleton.StartHost(spawnPos, spawnRot);
 
         print("Host -log in");
     }
