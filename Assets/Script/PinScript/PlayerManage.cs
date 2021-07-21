@@ -23,15 +23,15 @@ public class PlayerManage : MonoBehaviour
         {
             isLocalPause = !isLocalPause;
             FindObjectOfType<PlayerCam>().SetisPause = isLocalPause;
-        }
 
-        if (isLocalPause)
-        {
-            DisablePlayerScript();
-        }
-        else
-        {
-            EnablePlayerScript();
+            if (isLocalPause)
+            {
+                DisablePlayerScript();
+            }
+            else
+            {
+                EnablePlayerScript();
+            }
         }
     }
 
@@ -68,7 +68,7 @@ public class PlayerManage : MonoBehaviour
     {
         CheckActiveScript();
 
-        foreach(var script in PlayerScript)
+        foreach (var script in PlayerScript)
         {
             script.enabled = false;
         }

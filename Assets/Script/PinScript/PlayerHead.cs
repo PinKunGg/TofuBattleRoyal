@@ -8,7 +8,7 @@ public class PlayerHead : MonoBehaviour
     Transform refPos;
     public Vector3 OffSet;
     private void Update() {
-        this.transform.position = refPos.position + OffSet;
+        //this.transform.position = refPos.position + OffSet;
         //this.transform.rotation = Camera.main.transform.rotation;
     }
 }

@@ -1220,7 +1220,7 @@ MonoBehaviour:
   loginPanel: {fileID: 118172604}
   leaveButton: {fileID: 1647238383}
   nameInputField: {fileID: 251627859}
-  ipAddress: 
+  ipAddress: 127.0.0.1
 --- !u!114 &1364056668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,8 +1233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c005b32a68a254cbe502a4e5cb8eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NickName: Tofueiei
-  m_RoomName: 
+  m_NickName: eiei
+  m_RoomName: eiei_room
   m_MaxPlayers: 8
   m_ChannelIdCodesStartRange: 0
   m_AttachSupportLogger: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 1406824965}
   - component: {fileID: 1406824962}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2414,6 +2414,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5895408970068104959, guid: da9936004308c8e4bbc471c0f6d510e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895408970227486191, guid: da9936004308c8e4bbc471c0f6d510e7, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
