@@ -15,17 +15,19 @@ public class SetUpLocalPlayer : NetworkBehaviour
     {
         if (IsLocalPlayer)
         {
+            this.gameObject.tag = "LocalPlayer";
             playerCam = GameObject.Find("MainCamera").GetComponent<PlayerCam>();
             playerCam.SetRefPos = playerHead;
             playerCam.enabled = true;
             playerCam.transform.SetParent(playerHead);
-            playerCam.SetPlayerTrans = this.transform;
+            playerCam.SetPlayerBody = this.transform;
 
             GameObject.Find("Menu Cam").SetActive(false);
         }
 
         else
         {
+            this.gameObject.tag = "OtherPlayer";
             foreach (var item in PlayerScript)
             {
                 item.enabled = false;

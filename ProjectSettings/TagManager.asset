@@ -8,6 +8,10 @@ TagManager:
   - MainCanvas
   - JumpStep
   - Ground
+  - LocalPlayer
+  - OtherPlayer
+  - MyTeam
+  - OtherTeam
   layers:
   - Default
   - TransparentFX

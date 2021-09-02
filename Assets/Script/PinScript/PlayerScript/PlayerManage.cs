@@ -26,10 +26,12 @@ public class PlayerManage : MonoBehaviour
 
             if (isLocalPause)
             {
+                Cursor.lockState = CursorLockMode.None;
                 DisablePlayerScript();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 EnablePlayerScript();
             }
         }

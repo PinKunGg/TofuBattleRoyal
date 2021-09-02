@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    Transform refPos;
-    Transform playerTrans;
+    Transform playerHead;
+    Transform playerBody;
+    Transform weaponHandler;
     public Vector3 OffSet;
 
     float mouseX;
@@ -18,14 +19,21 @@ public class PlayerCam : MonoBehaviour
     {
         set
         {
-            refPos = value;
+            playerHead = value;
         }
     }
-    public Transform SetPlayerTrans
+    public Transform SetPlayerBody
     {
         set
         {
-            playerTrans = value;
+            playerBody = value;
+        }
+    }
+    public Transform SetWeaponHandler
+    {
+        set
+        {
+            weaponHandler = value;
         }
     }
     public bool SetisPause
@@ -47,17 +55,17 @@ public class PlayerCam : MonoBehaviour
 
     private void OnEnable()
     {
-        if (refPos == null)
+        if (playerHead == null)
         {
             return;
         }
 
-        this.transform.position = refPos.position + OffSet;
+        this.transform.position = playerHead.position + OffSet;
     }
 
     private void Update()
     {
-        if (refPos == null)
+        if (playerHead == null)
         {
             return;
         }
@@ -75,7 +83,9 @@ public class PlayerCam : MonoBehaviour
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            playerTrans.Rotate(Vector3.up * mouseX, Space.World);
+            //weaponHandler.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            //playerHead.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX, Space.World);
         }
     }
 }
